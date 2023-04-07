@@ -9,7 +9,7 @@ const OnePage = () => {
       } = theme.useToken();
     return (
         <Layout style={{
-            display:'block',
+            display:'flex',
         }}>
             <HeaderEfem/>
             <Layout style={{
@@ -18,7 +18,7 @@ const OnePage = () => {
                 padding: 15,
                 margin: 10,
             }}>
-                <AboutUs />
+                <AboutUs/>
             </Layout>
         </Layout>
     );
