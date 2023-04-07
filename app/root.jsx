@@ -18,7 +18,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body style={{padding: 0, margin: 0}}>
         <OnePage />
         <ScrollRestoration />
         <Scripts />

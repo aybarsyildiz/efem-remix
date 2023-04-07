@@ -11,12 +11,16 @@ const ContextDiv = (context) => {
         <Layout style={{
             margin: 10,
             padding:20,
+            flex: '1 0 auto',
         }}>
             <Content style={{
               borderRadius: 20,
-              minHeight: 512,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
               textAlign: 'center',
-              backgroundColor: '#ffff'
+              backgroundColor: '#ffff',
+              minHeight: 650,
             }}>
                {context}
             </Content>
