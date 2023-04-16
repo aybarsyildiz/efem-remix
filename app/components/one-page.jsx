@@ -17,7 +17,6 @@ const OnePage = () => {
             setScrolled(true);
             setShowAboutUs(false);
             setShowWhatDoWeDo(true);
-            console.log(scrolled + ' other one should be true ' + 'whatdowedo ' + showWhatDoWeDo)
         } else {
             setScrolled(false);
             setShowAboutUs(true);
@@ -35,6 +34,17 @@ const OnePage = () => {
         token: { colorBgContainer },
     } = theme.useToken();
 
+    const layoutStyle = (stateHandler) => {
+        return(
+        {display: 'block' ,
+        alignContent: 'center',
+        padding: 15,
+        margin: 10,
+        transition: 'opacity 0.5s ease-in-out',
+        opacity: stateHandler ? 1 : 0,}
+        )
+    };
+
     return (
         
         <Layout onScroll={handleScroll} style={{
@@ -43,25 +53,11 @@ const OnePage = () => {
             padding: 0
         }}>
             <HeaderEfem/>
-            <Layout style={{
-                display: 'block' ,
-                alignContent: 'center',
-                padding: 15,
-                margin: 10,
-                transition: 'opacity 0.5s ease-in-out',
-                opacity: showAboutUs ? 1 : 0,
-            }}>
+            <Layout style={layoutStyle(showAboutUs)}>
                 <AboutUs />
             </Layout>
 
-            <Layout style={{
-                display: 'block',
-                alignContent: 'center',
-                padding: 15,
-                margin: 10,
-                transition: 'opacity 0.5s ease-in-out',
-                opacity: showWhatDoWeDo ? 1 : 0,
-            }}>
+            <Layout style={layoutStyle(showWhatDoWeDo)}>
                 <WhatDoWeDo />
             </Layout>
         </Layout>

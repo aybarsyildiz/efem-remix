@@ -37,7 +37,7 @@ const HeaderEfem = () => {
         zIndex: 1,
         width: '100%',
         padding: 0,
-        transition: 'opacity 0.2s ease-in-out',
+        transition: 'opacity 0.4s ease-in-out',
         opacity: isVisible ? 1 : 0,
       }}
     >
