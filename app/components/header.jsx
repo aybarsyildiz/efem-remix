@@ -45,7 +45,6 @@ const HeaderEfem = () => {
       <Menu
         theme="dark"
         mode="horizontal"
-        defaultSelectedKeys={['2']}
         items={items1}
       />
     </Header>
